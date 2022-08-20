@@ -1,4 +1,4 @@
-import "./ToCurrency.scss";
+import "../../styles/currencyForm.scss";
 import { filterSlice } from "../../store/reducers/filterSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { currencyFilters } from "../../serverData/directions";
@@ -84,8 +84,8 @@ const ToCurrency = () => {
             <label htmlFor="radio-14">Банки RUB</label>
           </div>
         </div>
-        <input type="text" placeholder="123.4123" className="curency__input" />
-        <select name="currency">
+        <input type="text" placeholder="123.4123" className="currency__input" />
+        <select className="currency__select" name="currency">
           {filteredToList.map((item) => (
             <option value={item.code} key={Date.now + Math.random()}>
               {item.name}
